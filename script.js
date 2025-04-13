@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    "use strict";
+    
     // ローディングアニメーション
     window.addEventListener('load', function() {
         setTimeout(function() {
@@ -6,32 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.loader-wrapper').style.visibility = 'hidden';
             
             // ヒーローアニメーション
-            const heroTitle = document.querySelectorAll('.hero-title .reveal-text');
-            const heroSubtitle = document.querySelector('.hero-subtitle');
-            const heroCta = document.querySelector('.hero-cta');
-            
-            gsap.to(heroTitle, {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out"
-            });
-            
-            gsap.to(heroSubtitle, {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                delay: 0.5,
-                ease: "power3.out"
-            });
-            
-            gsap.to(heroCta, {
-                opacity: 1,
-                duration: 1,
-                delay: 0.8,
-                ease: "power3.out"
-            });
+            animateHero();
         }, 2000);
     });
 
@@ -43,11 +20,45 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 100
     });
 
+    // ヒーローアニメーション関数
+    function animateHero() {
+        const heroTitles = document.querySelectorAll('.hero-title .reveal-text');
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        const heroCta = document.querySelector('.hero-cta');
+        
+        // タイトルアニメーション
+        gsap.to(heroTitles, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+        
+        // サブタイトルアニメーション
+        gsap.to(heroSubtitle, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+        
+        // CTAボタンアニメーション
+        gsap.to(heroCta, {
+            opacity: 1,
+            duration: 1,
+            delay: 0.8,
+            ease: "power3.out"
+        });
+    }
+
     // ナビゲーションスクロール効果
     const header = document.querySelector('header');
     const scrollTop = document.querySelector('.scroll-top');
     
     window.addEventListener('scroll', function() {
+        // ヘッダースクロール効果
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
             scrollTop.classList.add('active');
@@ -91,9 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const body = document.body;
+    const hamburger = document.querySelector('.hamburger');
     
     menuToggle.addEventListener('click', function() {
+        // ナビゲーションの表示/非表示
         nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
         
         // オーバーレイ作成と削除
         if (nav.classList.contains('active')) {
@@ -106,28 +120,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 50);
             
             overlay.addEventListener('click', function() {
-                nav.classList.remove('active');
-                overlay.classList.remove('active');
-                
-                setTimeout(() => {
-                    body.removeChild(overlay);
-                }, 300);
+                closeMenu(overlay);
             });
         } else {
             const overlay = document.querySelector('.menu-overlay');
             if (overlay) {
-                overlay.classList.remove('active');
-                
-                setTimeout(() => {
-                    body.removeChild(overlay);
-                }, 300);
+                closeMenu(overlay);
             }
         }
-        
-        // ハンバーガーアニメーション
-        const spans = menuToggle.querySelectorAll('span');
-        spans.forEach(span => span.classList.toggle('active'));
     });
+    
+    // メニューを閉じる関数
+    function closeMenu(overlay) {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+        
+        setTimeout(() => {
+            body.removeChild(overlay);
+        }, 300);
+    }
     
     // ナビゲーションリンククリック
     const navLinks = document.querySelectorAll('.nav-link');
@@ -136,19 +148,10 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             // モバイルメニューが開いている場合は閉じる
             if (nav.classList.contains('active')) {
-                nav.classList.remove('active');
-                
                 const overlay = document.querySelector('.menu-overlay');
                 if (overlay) {
-                    overlay.classList.remove('active');
-                    
-                    setTimeout(() => {
-                        body.removeChild(overlay);
-                    }, 300);
+                    closeMenu(overlay);
                 }
-                
-                const spans = menuToggle.querySelectorAll('span');
-                spans.forEach(span => span.classList.remove('active'));
             }
         });
     });
@@ -189,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // スクロールトリガーアニメーション
+    // GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
     
     // パララックス効果
@@ -234,27 +237,86 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // フォームラベルアニメーション
-    const formGroups = document.querySelectorAll('.form-group');
+    const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
     
-    formGroups.forEach(group => {
-        const input = group.querySelector('input, textarea');
-        if (input) {
-            input.addEventListener('focus', () => {
-                group.classList.add('focused');
-            });
-            
-            input.addEventListener('blur', () => {
-                if (input.value === '') {
-                    group.classList.remove('focused');
-                }
-            });
-            
-            // 初期値があれば
-            if (input.value !== '') {
-                group.classList.add('focused');
+    formInputs.forEach(input => {
+        // プレースホルダー属性を空に設定
+        input.setAttribute('placeholder', ' ');
+        
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            if (this.value === '') {
+                this.parentElement.classList.remove('focused');
             }
+        });
+        
+        // 初期値があれば
+        if (input.value !== '') {
+            input.parentElement.classList.add('focused');
         }
     });
+    
+    // お問い合わせフォーム送信
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // フォーム送信処理をここに追加
+            // 通常はここでAjaxを使ってサーバーにデータを送信
+            
+            // 送信完了メッセージ（デモ用）
+            const formGroups = contactForm.querySelectorAll('.form-group');
+            formGroups.forEach(group => group.style.display = 'none');
+            
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <h3>送信完了</h3>
+                <p>お問い合わせありがとうございます。担当者からご連絡いたします。</p>
+            `;
+            
+            contactForm.appendChild(successMessage);
+            
+            // 3秒後にフォームをリセット
+            setTimeout(() => {
+                contactForm.reset();
+                formGroups.forEach(group => group.style.display = 'block');
+                contactForm.removeChild(successMessage);
+            }, 3000);
+        });
+    }
+    
+    // ニュースレターフォーム送信
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // フォーム送信処理
+            
+            // 送信完了メッセージ（デモ用）
+            const input = newsletterForm.querySelector('input');
+            const button = newsletterForm.querySelector('button');
+            const originalValue = input.value;
+            
+            input.disabled = true;
+            button.disabled = true;
+            
+            input.value = 'ご登録ありがとうございます！';
+            
+            setTimeout(() => {
+                input.disabled = false;
+                button.disabled = false;
+                input.value = '';
+                newsletterForm.reset();
+            }, 3000);
+        });
+    }
     
     // スムーズスクロール
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -272,72 +334,80 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
-
-// ハンバーガーボタンアニメーション
-const hamburger = document.querySelector('.hamburger');
-
-if (hamburger) {
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
+    
+    // ホバーエフェクト強化
+    function enhanceHoverEffects() {
+        // サービスアイテムのホバーエフェクト
+        const serviceItems = document.querySelectorAll('.service-item');
+        serviceItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                gsap.to(this.querySelector('.icon-container'), {
+                    rotate: 0,
+                    scale: 1.1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                gsap.to(this.querySelector('.icon-container'), {
+                    rotate: 5,
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+        
+        // 実績アイテムのホバーエフェクト
+        const achievementImages = document.querySelectorAll('.achievement-image');
+        achievementImages.forEach(image => {
+            image.addEventListener('mouseenter', function() {
+                gsap.to(this.querySelector('.hover-content'), {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            
+            image.addEventListener('mouseleave', function() {
+                gsap.to(this.querySelector('.hover-content'), {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+    }
+    
+    enhanceHoverEffects();
+    
+    // ページが完全に読み込まれたときのアニメーション
+    window.addEventListener('load', function() {
+        // スクロールトリガーアニメーションを追加
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            gsap.fromTo(section.querySelector('.section-header'), 
+                { opacity: 0, y: 30 },
+                { 
+                    opacity: 1, 
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        });
     });
-}
-
-// CSS用クラス追加
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.hamburger').innerHTML = `
-        <span></span>
-        <span></span>
-        <span></span>
-    `;
+    
+    // リサイズイベント対応
+    window.addEventListener('resize', function() {
+        AOS.refresh();
+    });
 });
-
-// ハンバーガーメニューのCSS
-document.head.insertAdjacentHTML('beforeend', `
-<style>
-.hamburger {
-    width: 30px;
-    height: 25px;
-    position: relative;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    transition: all 0.3s ease;
-}
-
-.hamburger span:nth-child(1) {
-    top: 0;
-}
-
-.hamburger span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.hamburger span:nth-child(3) {
-    bottom: 0;
-}
-
-.hamburger.active span:nth-child(1) {
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    bottom: 50%;
-    transform: translateY(50%) rotate(-45deg);
-}
-</style>
-`);
