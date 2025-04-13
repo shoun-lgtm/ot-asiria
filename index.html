@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="株式会社Asiria - 革新的なテクノロジーソリューションで企業の成長をサポートします">
     <title>株式会社Asiria - 革新的ソリューション</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- ローディング画面 -->
@@ -32,6 +34,7 @@
                     <li><a href="#services" class="nav-link">サービス</a></li>
                     <li><a href="#philosophy" class="nav-link">企業理念</a></li>
                     <li><a href="#achievements" class="nav-link">実績</a></li>
+                    <li><a href="#news" class="nav-link">最新情報</a></li>
                     <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
                 </ul>
             </nav>
@@ -45,236 +48,259 @@
         </div>
     </header>
 
-    <!-- ヒーローセクション -->
-    <section id="home" class="hero">
-        <div class="hero-content">
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="hero-title">
+                        <span class="reveal-text">ビジネスの未来を</span>
+                        <span class="reveal-text">共に<span class="highlight">創造する</span></span>
+                    </h1>
+                    <p class="hero-subtitle reveal-text">革新的なソリューションで企業価値を高める戦略的パートナー</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">お問い合わせ</a>
+                        <a href="#services" class="btn btn-outline">サービスを見る</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-bg-image"></div>
+                <div class="hero-particles"></div>
+            </div>
+            <div class="scroll-indicator">
+                <span>スクロール</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- 会社概要 -->
+        <section id="about" class="about">
             <div class="container">
-                <h1 class="hero-title">
-                    <span class="reveal-text">革新的な技術で</span>
-                    <span class="reveal-text">未来を<span class="highlight">創造する</span></span>
-                </h1>
-                <p class="hero-subtitle reveal-text">株式会社Asiriaは、最先端のテクノロジーとクリエイティブな発想で、あなたのビジネスを次のレベルへと導きます</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">お問い合わせ</a>
-                    <a href="#services" class="btn btn-outline">サービスを見る</a>
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">About Us</span>
+                    <h2>会社概要</h2>
+                    <div class="section-line"></div>
                 </div>
-            </div>
-        </div>
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <div class="hero-particles"></div>
-        </div>
-        <div class="scroll-indicator">
-            <span>スクロール</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- 会社概要 -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">About Us</span>
-                <h2>会社概要</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="section-content">
-                <div class="text-content" data-aos="fade-right" data-aos-delay="200">
-                    <p class="lead-text">株式会社Asiriaは、2025年12月31日に設立予定の、web・AI技術開発、ラズベリー産業、M＆Aを中心とする企業です。</p>
-                    <p>私たちは単なるサービス提供者ではなく、お客様のビジネスパートナーとして、課題解決から新たな価値創造までをトータルでサポートしています。常に最新の技術動向を追求し、革新的なソリューションを生み出す情熱と専門性を持ったチームが、あなたのビジョンの実現をお手伝いします。</p>
-                    <p>※このwebサイトは試験的に運用しているもので事実と異なることが多々あります。</p>
-                    <div class="company-stats">
-                    <div class="company-stats">
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                            <span class="stat-number counter" data-target="13">0</span>
-                            <span class="stat-text">年の実績</span>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                            <span class="stat-number counter" data-target="250">0</span>
-                            <span class="stat-text">プロジェクト</span>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                            <span class="stat-number counter" data-target="120">0</span>
-                            <span class="stat-text">クライアント</span>
-                        </div>
-                    </div>
-                    <table class="company-info" data-aos="fade-up" data-aos-delay="400">
-                        <tr>
-                            <th>会社名</th>
-                            <td>株式会社Asiria</td>
-                        </tr>
-                        <tr>
-                            <th>設立</th>
-                            <td>2025年12月</td>
-                        </tr>
-                        <tr>
-                            <th>代表取締役</th>
-                            <td>安田　翔雲</td>
-                        </tr>
-                        <tr>
-                            <th>所在地</th>
-                            <td>〒100-0001 東京都千代田区1-1-1 Asiriaビル</td>
-                        </tr>
-                        <tr>
-                            <th>事業内容</th>
-                            <td>システム開発、AI関連事業、ラズベリー関連事業、M＆A</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="image-wrapper" data-aos="fade-left" data-aos-delay="300">
-                    <div class="image-placeholder about-image">
-                        <div class="image-overlay"></div>
-                        <div class="image-shape"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- サービス -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Our Services</span>
-                <h2>サービス</h2>
-                <div class="section-line"></div>
-            </div>
-            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
-                企業のデジタル変革をトータルサポートする、多彩なソリューションを提供しています
-            </p>
-            <div class="service-grid">
-                <div class="service-item" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>システム開発</h3>
-                    <p>お客様のビジネスに最適なシステムを設計・開発します。最新の技術を活用し、拡張性と安定性を兼ね備えたシステムをご提供します。</p>
-                    <a href="#" class="service-link">
-                        <span>詳細を見る</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="service-item" data-aos="zoom-in-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Webサービス構築</h3>
-                    <p>使いやすく魅力的なWebサービスを構築します。モバイルフレンドリーなデザインとSEO対策で、お客様のオンラインプレゼンスを強化します。</p>
-                    <a href="#" class="service-link">
-                        <span>詳細を見る</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="service-item" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>ビジネスコンサルティング</h3>
-                    <p>経験豊富なコンサルタントがビジネス戦略の策定から実行までサポートします。データ分析に基づいた提案で成果を最大化します。</p>
-                    <a href="#" class="service-link">
-                        <span>詳細を見る</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="service-item" data-aos="zoom-in-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>クラウドソリューション</h3>
-                    <p>クラウド環境の構築・移行・運用をトータルサポート。コスト削減と業務効率化を実現します。セキュリティ対策も万全です。</p>
-                    <a href="#" class="service-link">
-                        <span>詳細を見る</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="services-background">
-            <div class="bg-gradient"></div>
-            <div class="bg-pattern"></div>
-        </div>
-    </section>
-
-    <!-- 企業理念 -->
-    <section id="philosophy" class="philosophy">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Our Philosophy</span>
-                <h2>企業理念</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="section-content">
-                <div class="image-wrapper" data-aos="fade-right" data-aos-delay="200">
-                    <div class="image-placeholder philosophy-image">
-                        <div class="philosophy-shapes">
-                            <div class="shape shape-1"></div>
-                            <div class="shape shape-2"></div>
-                            <div class="shape shape-3"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-content" data-aos="fade-left" data-aos-delay="300">
-                    <div class="philosophy-item">
-                        <h3><span class="highlight">Vision</span></h3>
-                        <p>テクノロジーの力で社会に貢献し、より豊かな未来を創造する</p>
-                    </div>
-                    
-                    <div class="philosophy-item">
-                        <h3><span class="highlight">Mission</span></h3>
-                        <p>顧客のビジネス課題を解決し、継続的な成長をサポートする革新的なソリューションを提供する</p>
-                    </div>
-                    
-                    <div class="philosophy-item">
-                        <h3><span class="highlight">Values</span></h3>
-                        <div class="values-grid">
-                            <div class="value-item" data-aos="zoom-in" data-aos-delay="100">
-                                <div class="value-icon"><i class="fas fa-handshake"></i></div>
-                                <h4>誠実</h4>
-                                <p>常に誠実さを持って行動し、信頼関係を構築します</p>
+                <div class="section-content">
+                    <div class="text-content" data-aos="fade-right" data-aos-delay="200">
+                        <p class="lead-text">株式会社Asiriaは、2010年の設立以来、テクノロジーの力で企業の成長と社会の発展に貢献し続けています。</p>
+                        <p>私たちは単なるサービス提供者ではなく、お客様のビジネスパートナーとして、課題解決から新たな価値創造までをトータルでサポートしています。常に最新の技術動向を追求し、革新的なソリューションを生み出す情熱と専門性を持ったチームが、あなたのビジョンの実現をお手伝いします。</p>
+                        <div class="company-stats">
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                                <span class="stat-number counter" data-target="13">0</span>
+                                <span class="stat-text">年の実績</span>
                             </div>
-                            <div class="value-item" data-aos="zoom-in" data-aos-delay="200">
-                                <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
-                                <h4>革新</h4>
-                                <p>既存の枠にとらわれず、常に新しい価値を創造します</p>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                                <span class="stat-number counter" data-target="250">0</span>
+                                <span class="stat-text">プロジェクト</span>
                             </div>
-                            <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
-                                <div class="value-icon"><i class="fas fa-users"></i></div>
-                                <h4>協働</h4>
-                                <p>チームワークを大切にし、共に成長することを目指します</p>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                                <span class="stat-number counter" data-target="120">0</span>
+                                <span class="stat-text">クライアント</span>
                             </div>
-                            <div class="value-item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="value-icon"><i class="fas fa-mountain"></i></div>
-                                <h4>挑戦</h4>
-                                <p>困難な課題にも前向きに取り組み、限界に挑戦します</p>
+                        </div>
+                        <table class="company-info" data-aos="fade-up" data-aos-delay="400">
+                            <tr>
+                                <th>会社名</th>
+                                <td>株式会社Asiria</td>
+                            </tr>
+                            <tr>
+                                <th>設立</th>
+                                <td>2010年4月</td>
+                            </tr>
+                            <tr>
+                                <th>代表取締役</th>
+                                <td>山田 太郎</td>
+                            </tr>
+                            <tr>
+                                <th>所在地</th>
+                                <td>〒100-0001 東京都千代田区1-1-1 Asiriaビル</td>
+                            </tr>
+                            <tr>
+                                <th>事業内容</th>
+                                <td>システム開発、Webサービス構築、コンサルティング</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="image-wrapper" data-aos="fade-left" data-aos-delay="300">
+                        <div class="about-image">
+                            <div class="image-overlay"></div>
+                            <div class="image-shape"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション区切り -->
+        <div class="section-divider">
+            <div class="divider-curve"></div>
+        </div>
+
+        <!-- サービス -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Our Services</span>
+                    <h2>サービス</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+                    企業のデジタル変革をトータルサポートする、多彩なソリューションを提供しています
+                </p>
+                <div class="service-grid">
+                    <div class="service-item" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="icon-shadow"></div>
+                        </div>
+                        <h3>システム開発</h3>
+                        <p>お客様のビジネスに最適なシステムを設計・開発します。最新の技術を活用し、拡張性と安定性を兼ね備えたシステムをご提供します。</p>
+                        <a href="#" class="service-link">
+                            <span>詳細を見る</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="service-item" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="icon-shadow"></div>
+                        </div>
+                        <h3>Webサービス構築</h3>
+                        <p>使いやすく魅力的なWebサービスを構築します。モバイルフレンドリーなデザインとSEO対策で、お客様のオンラインプレゼンスを強化します。</p>
+                        <a href="#" class="service-link">
+                            <span>詳細を見る</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="service-item" data-aos="zoom-in-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="icon-shadow"></div>
+                        </div>
+                        <h3>ビジネスコンサルティング</h3>
+                        <p>経験豊富なコンサルタントがビジネス戦略の策定から実行までサポートします。データ分析に基づいた提案で成果を最大化します。</p>
+                        <a href="#" class="service-link">
+                            <span>詳細を見る</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="service-item" data-aos="zoom-in-up" data-aos-delay="400">
+                        <div class="service-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="icon-shadow"></div>
+                        </div>
+                        <h3>クラウドソリューション</h3>
+                        <p>クラウド環境の構築・移行・運用をトータルサポート。コスト削減と業務効率化を実現します。セキュリティ対策も万全です。</p>
+                        <a href="#" class="service-link">
+                            <span>詳細を見る</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="services-background">
+                <div class="bg-gradient"></div>
+                <div class="bg-pattern"></div>
+            </div>
+        </section>
+
+        <!-- 企業理念 -->
+        <section id="philosophy" class="philosophy">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Our Philosophy</span>
+                    <h2>企業理念</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="section-content">
+                    <div class="image-wrapper" data-aos="fade-right" data-aos-delay="200">
+                        <div class="philosophy-image">
+                            <div class="philosophy-shapes">
+                                <div class="shape shape-1"></div>
+                                <div class="shape shape-2"></div>
+                                <div class="shape shape-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-content" data-aos="fade-left" data-aos-delay="300">
+                        <div class="philosophy-item">
+                            <h3><span class="highlight">Vision</span></h3>
+                            <p>テクノロジーの力で社会に貢献し、より豊かな未来を創造する</p>
+                        </div>
+                        
+                        <div class="philosophy-item">
+                            <h3><span class="highlight">Mission</span></h3>
+                            <p>顧客のビジネス課題を解決し、継続的な成長をサポートする革新的なソリューションを提供する</p>
+                        </div>
+                        
+                        <div class="philosophy-item">
+                            <h3><span class="highlight">Values</span></h3>
+                            <div class="values-grid">
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                                    <h4>誠実</h4>
+                                    <p>常に誠実さを持って行動し、信頼関係を構築します</p>
+                                </div>
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="200">
+                                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                                    <h4>革新</h4>
+                                    <p>既存の枠にとらわれず、常に新しい価値を創造します</p>
+                                </div>
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+                                    <div class="value-icon"><i class="fas fa-users"></i></div>
+                                    <h4>協働</h4>
+                                    <p>チームワークを大切にし、共に成長することを目指します</p>
+                                </div>
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="value-icon"><i class="fas fa-mountain"></i></div>
+                                    <h4>挑戦</h4>
+                                    <p>困難な課題にも前向きに取り組み、限界に挑戦します</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 実績 -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Our Works</span>
-                <h2>実績</h2>
-                <div class="section-line"></div>
-            </div>
-            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
-                これまでに多くの企業様と協力し、様々なプロジェクトを成功に導いてきました
-            </p>
-            <div class="achievement-filters" data-aos="fade-up" data-aos-delay="200">
-                <button class="filter-btn active" data-filter="all">すべて</button>
-                <button class="filter-btn" data-filter="web">Web開発</button>
-                <button class="filter-btn" data-filter="system">システム開発</button>
-                <button class="filter-btn" data-filter="consulting">コンサルティング</button>
-            </div>
-            <div class="achievement-grid">
-                <div class="achievement-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
-                    <div class="achievement-image">
-                        <div class="image-placeholder">
+        <!-- セクション区切り -->
+        <div class="section-divider">
+            <div class="divider-curve reverse"></div>
+        </div>
+
+        <!-- 実績 -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Our Works</span>
+                    <h2>実績</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+                    これまでに多くの企業様と協力し、様々なプロジェクトを成功に導いてきました
+                </p>
+                <div class="achievement-filters" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">すべて</button>
+                    <button class="filter-btn" data-filter="web">Web開発</button>
+                    <button class="filter-btn" data-filter="system">システム開発</button>
+                    <button class="filter-btn" data-filter="consulting">コンサルティング</button>
+                </div>
+                <div class="achievement-grid">
+                    <div class="achievement-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                        <div class="achievement-image">
+                            <div class="achievement-img web-project-1"></div>
                             <div class="image-hover">
                                 <div class="hover-content">
                                     <h4>ECプラットフォーム構築</h4>
@@ -283,16 +309,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">Web開発</span>
+                            <h3>大手小売業向けECプラットフォーム</h3>
+                            <p>売上30%増加を実現した次世代ECシステムの開発</p>
+                        </div>
                     </div>
-                    <div class="achievement-info">
-                        <span class="achievement-category">Web開発</span>
-                        <h3>大手小売業向けECプラットフォーム</h3>
-                        <p>売上30%増加を実現した次世代ECシステムの開発</p>
-                    </div>
-                </div>
-                <div class="achievement-item" data-category="system" data-aos="fade-up" data-aos-delay="200">
-                    <div class="achievement-image">
-                        <div class="image-placeholder">
+                    <div class="achievement-item" data-category="system" data-aos="fade-up" data-aos-delay="200">
+                        <div class="achievement-image">
+                            <div class="achievement-img system-project-1"></div>
                             <div class="image-hover">
                                 <div class="hover-content">
                                     <h4>生産管理システム</h4>
@@ -301,16 +326,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">システム開発</span>
+                            <h3>製造業向け生産管理システム</h3>
+                            <p>生産効率を20%向上させた統合管理システムの構築</p>
+                        </div>
                     </div>
-                    <div class="achievement-info">
-                        <span class="achievement-category">システム開発</span>
-                        <h3>製造業向け生産管理システム</h3>
-                        <p>生産効率を20%向上させた統合管理システムの構築</p>
-                    </div>
-                </div>
-                <div class="achievement-item" data-category="consulting" data-aos="fade-up" data-aos-delay="300">
-                    <div class="achievement-image">
-                        <div class="image-placeholder">
+                    <div class="achievement-item" data-category="consulting" data-aos="fade-up" data-aos-delay="300">
+                        <div class="achievement-image">
+                            <div class="achievement-img consulting-project-1"></div>
                             <div class="image-hover">
                                 <div class="hover-content">
                                     <h4>データ分析基盤</h4>
@@ -319,118 +343,179 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-category">コンサルティング</span>
-                        <h3>金融機関向けデータ分析基盤</h3>
-                        <p>リアルタイムデータ分析による意思決定支援システムの開発</p>
+                        <div class="achievement-info">
+                            <span class="achievement-category">コンサルティング</span>
+                            <h3>金融機関向けデータ分析基盤</h3>
+                            <p>リアルタイムデータ分析による意思決定支援システムの開発</p>
+                        </div>
                     </div>
                 </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#" class="btn btn-outline">すべての実績を見る</a>
+                </div>
             </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                <a href="#" class="btn btn-outline">すべての実績を見る</a>
+            <div class="achievements-background">
+                <div class="bg-gradient"></div>
             </div>
-        </div>
-        <div class="achievements-background">
-            <div class="bg-gradient"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA セクション -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up">
-                <h2>ビジネスの可能性を広げましょう</h2>
-                <p>革新的なデジタルソリューションで、あなたのビジネスを次のステージへ</p>
-                <a href="#contact" class="btn btn-primary">お問い合わせ</a>
-            </div>
-        </div>
-        <div class="cta-background">
-            <div class="cta-overlay"></div>
-        </div>
-    </section>
-
-    <!-- お問い合わせ -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Contact Us</span>
-                <h2>お問い合わせ</h2>
-                <div class="section-line"></div>
-            </div>
-            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
-                ご質問やお見積りのご依頼など、お気軽にお問い合わせください
-            </p>
-            <div class="contact-wrapper">
-                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+        <!-- 最新情報 -->
+        <section id="news" class="news">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Latest News</span>
+                    <h2>最新情報</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="news-grid">
+                    <!-- ニュースカード1 -->
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">APR</span>
                         </div>
-                        <div class="contact-text">
-                            <h3>所在地</h3>
-                            <p>〒100-0001 東京都千代田区1-1-1<br>Asiriaビル</p>
+                        <div class="news-image news-img-1">
+                        </div>
+                        <div class="news-content">
+                            <h3>新サービス「Asiria Cloud」提供開始</h3>
+                            <p>企業のDX推進を加速させる新クラウドサービスの提供を開始しました。</p>
+                            <a href="#" class="news-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
+                    
+                    <!-- ニュースカード2 -->
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="news-date">
+                            <span class="day">28</span>
+                            <span class="month">MAR</span>
                         </div>
-                        <div class="contact-text">
-                            <h3>電話番号</h3>
-                            <p>03-1234-5678</p>
+                        <div class="news-image news-img-2">
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>メールアドレス</h3>
-                            <p>info@asiria.co.jp</p>
+                        <div class="news-content">
+                            <h3>大手製造業A社との業務提携を発表</h3>
+                            <p>AI技術を活用した次世代製造システムの共同開発を行うことになりました。</p>
+                            <a href="#" class="news-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    
+                    <!-- ニュースカード3 -->
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="news-date">
+                            <span class="day">10</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <div class="news-image news-img-3">
+                        </div>
+                        <div class="news-content">
+                            <h3>テクノロジーカンファレンス2023に登壇</h3>
+                            <p>代表取締役の山田がDXをテーマにした基調講演を行いました。</p>
+                            <a href="#" class="news-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
-                <form class="contact-form" data-aos="fade-left" data-aos-delay="300">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name" class="form-label">お名前</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="company" name="company">
-                        <label for="company" class="form-label">会社名</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email" class="form-label">メールアドレス</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone">
-                        <label for="phone" class="form-label">電話番号</label>
-                    </div>
-                    <div class="form-group full-width">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message" class="form-label">お問い合わせ内容</label>
-                    </div>
-                    <div class="form-group full-width">
-                        <button type="submit" class="btn btn-primary">送信する</button>
-                    </div>
-                </form>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#" class="btn btn-outline">すべてのニュースを見る</a>
+                </div>
             </div>
-        </div>
-        <div class="contact-background">
-            <div class="map-container">
-                <!-- ここに地図が入ります -->
-                <div class="map-placeholder"></div>
+        </section>
+
+        <!-- CTA セクション -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2>ビジネスの可能性を広げましょう</h2>
+                    <p>革新的なデジタルソリューションで、あなたのビジネスを次のステージへ</p>
+                    <a href="#contact" class="btn btn-primary">お問い合わせ</a>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="cta-background">
+                <div class="cta-overlay"></div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Contact Us</span>
+                    <h2>お問い合わせ</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+                    ご質問やお見積りのご依頼など、お気軽にお問い合わせください
+                </p>
+                <div class="contact-wrapper">
+                    <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>所在地</h3>
+                                <p>〒100-0001 東京都千代田区1-1-1<br>Asiriaビル</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>電話番号</h3>
+                                <p>03-1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>メールアドレス</h3>
+                                <p>info@asiria.co.jp</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" data-aos="fade-left" data-aos-delay="300">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name" class="form-label">お名前</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company">
+                            <label for="company" class="form-label">会社名</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email" class="form-label">メールアドレス</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone" class="form-label">電話番号</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message" class="form-label">お問い合わせ内容</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="contact-background">
+                <div class="map-container">
+                    <div class="map-placeholder"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- フッター -->
     <footer>
@@ -457,6 +542,7 @@
                             <li><a href="#services">サービス</a></li>
                             <li><a href="#philosophy">企業理念</a></li>
                             <li><a href="#achievements">実績</a></li>
+                            <li><a href="#news">最新情報</a></li>
                             <li><a href="#contact">お問い合わせ</a></li>
                         </ul>
                     </div>
